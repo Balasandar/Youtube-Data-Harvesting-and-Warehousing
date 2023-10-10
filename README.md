@@ -85,10 +85,6 @@ With the combined capabilities of Plotly and Streamlit, the Data Analysis sectio
 
 Contributions to this project are welcome! If you encounter any issues or have suggestions for improvements, please feel free to submit a pull request.
 
-**License**
-
-This project is licensed under the MIT License. Please review the LICENSE file for more details.
-
 **Contact**
 
 📧 Email: chandru2115@gmail.com 
