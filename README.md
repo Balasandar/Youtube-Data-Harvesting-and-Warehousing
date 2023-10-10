@@ -15,8 +15,7 @@ YouTube Data Harvesting and Warehousing is a project aimed at developing a user-
 7. Migrating data to a SQL data warehouse
 8. Data Analysis
 9. Contributing
-10. License
-11. Contact
+10. Contact
 
 **Key Technologies and Skills**
 - Python scripting
