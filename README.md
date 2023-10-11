@@ -22,7 +22,6 @@ YouTube Data Harvesting and Warehousing is a project aimed at developing a user-
 - Data Collection
 - API integration
 - Streamlit
-- Plotly
 - Data Management using MongoDB (Atlas) and SQL
 
 **Installation**
@@ -33,7 +32,6 @@ pip install google-api-python-client
 pip install pymongo
 pip install pandas
 pip install streamlit
-pip install plotly
 ```
 
 **Usage**
