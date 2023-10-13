@@ -2,10 +2,11 @@
 import pandas as pd
 import streamlit as st
 from googleapiclient.discovery import build
-
+import certifi
 from pymongo import MongoClient
 from bson import ObjectId
 # import mysql.connector
+import certifi
 import mysql.connector as sql 
 from datetime import datetime
 import time
@@ -37,11 +38,11 @@ atlas_password = 'Bala02130'
 atlas_cluster = 'cluster0'
 client = MongoClient(
     f"mongodb+srv://{atlas_username}:{atlas_password}@{atlas_cluster}.m91mjng.mongodb.net/?retryWrites=true&w=majority")
-# mongodb+srv://Balasandar:<password>@cluster0.vzitov2.mongodb.net/?retryWrites=true&w=majority
 db = client['youtube_data']
 collection = db['channel_data']
+
 #api_key
-Api_key = 'AIzaSyDAfGDLSET-54YNQSBVdaRrvR0jTpitsTY'
+Api_key = 'AIzaSyBeZ8II9ZdS1Io0F0sdLkj_aR0VEggxQgE'
 
 # Set Streamlit app title
 st.title("YouTube Data Harvesting and Warehousing")
@@ -54,7 +55,6 @@ e,f = st.tabs(["Migrate channel information from MongoDB Atlas to SQL",
      " Migrate video information from MongoDB Atlas to SQL "])
 g,h = st.tabs(["Migrate comment information from MongoDB Atlas to SQL",
      "channel analysis"])
-
 
 def parse_duration(duration):
     duration_str = ""
@@ -92,9 +92,9 @@ def parse_duration(duration):
 # Retrieve all video_ids
 def get_video_ids(youtube, playlist_id):
     request = youtube.playlistItems().list(
-         part='contentDetails',
+        part='contentDetails',
         playlistId=playlist_id,
-        maxResults=500)
+        maxResults=50)
     response = request.execute()
 
     video_ids = []
@@ -578,3 +578,4 @@ with h:
         st.dataframe(question9())
     elif select_question == '10. Which videos have the highest number of comments, and what are their corresponding channel names?':
         st.dataframe(question10())
+
